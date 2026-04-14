@@ -2,8 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
-import '../modules/profile/bindings/profile_binding.dart';
-import '../modules/profile/views/profile_view.dart';
+import '../modules/resume/bindings/resume_binding.dart';
+import '../modules/resume/views/resume_view.dart';
 
 part 'app_routes.dart';
 
@@ -19,9 +19,9 @@ class AppPages {
       binding: HomeBinding(),
     ),
     GetPage(
-      name: _Paths.PROFILE,
-      page: () => const ProfileView(),
-      binding: ProfileBinding(),
+      name: _Paths.RESUME,
+      page: () => const ResumeView(),
+      binding: ResumeBinding(),
     ),
   ];
 }
