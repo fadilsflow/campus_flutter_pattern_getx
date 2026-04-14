@@ -12,9 +12,7 @@ class HomeView extends GetView<HomeController> {
     final profile = controller.profile;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profile'),
-      ),
+      // appBar: AppBar(title: const Text('Profile')),
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
@@ -38,17 +36,13 @@ class HomeView extends GetView<HomeController> {
                       children: [
                         Row(
                           children: [
-                            Container(
-                              width: 72,
-                              height: 72,
-                              decoration: BoxDecoration(
-                                color: const Color(0xFF1D1D1D),
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: const Icon(
-                                Icons.person_outline_rounded,
-                                color: Colors.white,
-                                size: 36,
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.asset(
+                                'assets/images/profile.png',
+                                width: 72,
+                                height: 72,
+                                fit: BoxFit.cover,
                               ),
                             ),
                             const SizedBox(width: 16),
@@ -84,17 +78,17 @@ class HomeView extends GetView<HomeController> {
                         const SizedBox(height: 12),
                         Text(
                           profile.name,
-                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            color: const Color(0xFF8B8B8B),
-                          ),
+                          style: Theme.of(context).textTheme.bodyMedium
+                              ?.copyWith(color: const Color(0xFF8B8B8B)),
                         ),
                         const SizedBox(height: 24),
                         Text(
                           profile.about,
-                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                            color: const Color(0xFFD6D6D6),
-                            height: 1.6,
-                          ),
+                          style: Theme.of(context).textTheme.bodyLarge
+                              ?.copyWith(
+                                color: const Color(0xFFD6D6D6),
+                                height: 1.6,
+                              ),
                         ),
                         const SizedBox(height: 24),
                         Wrap(
@@ -177,32 +171,14 @@ class HomeView extends GetView<HomeController> {
                       borderRadius: BorderRadius.circular(24),
                     ),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Explore More',
-                          style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                            color: const Color(0xFF0A0A0A),
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                        const SizedBox(height: 8),
-                        const Text(
-                          'Lihat ringkasan project dan pengalaman kerja dalam tampilan yang sederhana.',
-                          style: TextStyle(
-                            color: Color(0xFF3A3A3A),
-                            height: 1.5,
-                          ),
-                        ),
-                        const SizedBox(height: 18),
-                        // Tombol navigasi GetX dibuat simpel supaya mudah dijelaskan saat demo.
                         _NavigationButton(
-                          label: 'Open Projects',
+                          label: 'Projects',
                           onTap: () => Get.toNamed(Routes.PROJECTS),
                         ),
                         const SizedBox(height: 12),
                         _NavigationButton(
-                          label: 'Open Experiences',
+                          label: 'Experiences',
                           onTap: () => Get.toNamed(Routes.EXPERIENCES),
                         ),
                       ],
@@ -219,10 +195,7 @@ class HomeView extends GetView<HomeController> {
 }
 
 class _NavigationButton extends StatelessWidget {
-  const _NavigationButton({
-    required this.label,
-    required this.onTap,
-  });
+  const _NavigationButton({required this.label, required this.onTap});
 
   final String label;
   final VoidCallback onTap;
@@ -275,9 +248,9 @@ class _InfoCard extends StatelessWidget {
           const SizedBox(height: 18),
           Text(
             title,
-            style: Theme.of(context).textTheme.labelLarge?.copyWith(
-              color: const Color(0xFF8B8B8B),
-            ),
+            style: Theme.of(
+              context,
+            ).textTheme.labelLarge?.copyWith(color: const Color(0xFF8B8B8B)),
           ),
           const SizedBox(height: 6),
           Text(
