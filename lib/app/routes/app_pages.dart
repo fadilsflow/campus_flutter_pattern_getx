@@ -1,9 +1,13 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:get/get.dart';
 
+import '../modules/experiences/bindings/experiences_binding.dart';
+import '../modules/experiences/views/experiences_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
-import '../modules/resume/bindings/resume_binding.dart';
-import '../modules/resume/views/resume_view.dart';
+import '../modules/projects/bindings/projects_binding.dart';
+import '../modules/projects/views/projects_view.dart';
 
 part 'app_routes.dart';
 
@@ -19,9 +23,14 @@ class AppPages {
       binding: HomeBinding(),
     ),
     GetPage(
-      name: _Paths.RESUME,
-      page: () => const ResumeView(),
-      binding: ResumeBinding(),
+      name: _Paths.PROJECTS,
+      page: () => const ProjectsView(),
+      binding: ProjectsBinding(),
+    ),
+    GetPage(
+      name: _Paths.EXPERIENCES,
+      page: () => const ExperiencesView(),
+      binding: ExperiencesBinding(),
     ),
   ];
 }

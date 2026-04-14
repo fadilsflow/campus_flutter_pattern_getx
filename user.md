@@ -1,0 +1,62 @@
+import type { User } from "@/features/profile/types/user";
+
+export const USER: User = {
+  firstName: "Wahyu",
+  lastName: "Akhmad Fadillah",
+  displayName: "Fadil",
+  username: "fadil",
+  gender: "male",
+  pronouns: "he/him",
+  bio: "Full Stack Developer with 2+ years of experience building production-ready, scalable web applications. Proficient in end-to-end development with Next.js, TypeScript, and modern tooling, with a strong interest in SaaS platforms and AI-assisted development.",
+  address: "Tegal, Jawa Tengah, Indonesia",
+  phoneNumber: "KzYyODUxNTc3Mzk5Nzg=", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
+  email: "d2FoeXVmYWRpbDExNDBAZ21haWwuY29t", // base64 encoded
+  website: "https://fadils.xyz",
+  jobTitle: "Full Stack Developer",
+  flipSentences: ["Software Engineer"],
+
+  jobs: [
+    {
+      title: "Full Stack Developer",
+      company: "Freelance",
+      website: "https://fadils.web.id",
+    },
+  ],
+  about: `
+Hello, World! I am Wahyu Akhmad Fadillah — a Full Stack Developer from Indonesia passionate about creating efficient, user-centric web solutions from front-end to back-end.
+
+With 2+ years of experience, I specialize in building production-ready, scalable web applications using Next.js, TypeScript, and modern tooling. I'm also experienced in integrating AI capabilities and third-party APIs, and I effectively leverage AI-assisted development tools like Cursor to accelerate development and improve code quality.
+
+One of my flagship projects is [Kreasi](https://github.com/fadilsflow/kreasi), an open-source link-in-bio platform with a drag-and-drop block editor, digital product sales, and a financial ledger system — built with TanStack Start, tRPC, and Midtrans.
+
+I also created [Jeda](https://github.com/fadilsflow/jeda), a Pomodoro timer app with productivity stats, leaderboard, ambient sounds, and Better Auth integration — and [Rightsponse](https://rs.fadils.xyz), an AI-powered writing assistant using Google Gemini.
+
+Let's connect and collaborate!
+`,
+  avatar:
+    "https://res.cloudinary.com/dxurnpbrc/image/upload/v1758206850/profile_avsqcv.webp",
+  ogImage:
+    "https://res.cloudinary.com/dxurnpbrc/image/upload/v1758294318/1_pojo5c.png",
+  namePronunciationUrl: "/p/fadil.mp3",
+  keywords: [
+    "Wahyu Akhmad Fadillah",
+    "Fadil",
+    "Akhmad Fadillah",
+    "Wahyu Fadil",
+    "Wahyu Akhmad",
+    "Wahyu",
+    "Fadillah",
+    "Akhmad",
+    "Wahyu Akhmad Fadillah Portfolio",
+    "Full Stack Developer",
+    "Software Engineer",
+    "Web Developer Indonesia",
+    "Tegal Developer",
+    "Next.js Developer",
+    "TypeScript Developer",
+    "React Developer",
+    "Frontend Developer",
+    "Backend Developer",
+  ],
+  dateCreated: "2025-9-20", // YYYY-MM-DD
+};
